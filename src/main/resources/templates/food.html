@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Foodpage</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+
+<div th:replace="header">...</div>
+
+<body>
+
+<table class="table" align="center">
+    <thead>
+    <tr>
+        <th>Produkt</th>
+        <th>pris</th>
+    </tr>
+    </thead>
+
+    <tbody>
+
+    <tr th:each="food: ${foods}">
+        <td th:text="${food.getName()}"></td>
+        <td th:text="${food.getPrice()}"></td>
+    </tr>
+
+    </tbody>
+
+
+    <form>
+        <input type="button" onclick="window.location.href='http://localhost:9898/addFood';" value="Tilføj mad" />
+    </form>
+
+</table>
+
+<h1> Her er food </h1>
+
+
+
+</body>
+</html>

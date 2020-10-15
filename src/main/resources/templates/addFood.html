@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Tilføj Food</title>
+</head>
+
+<body>
+
+<form action="#" th:action="@{/addFood}" th:object="${food}" method="post">
+
+    <p>Food Name: <input type="text" th:field="*{name}" required></p>
+    <p>Food Price: <input type="number" th:field="*{price}"></p>
+
+    <input type="submit" value="Tilføj" class="btn add2"/>
+</form>
+
+</body>
+</html>

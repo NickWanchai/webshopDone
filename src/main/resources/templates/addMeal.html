@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Tilføj Meal</title>
+</head>
+
+<div th:replace="header">...</div>
+
+<body>
+
+<!-- nr1-->
+
+<table class="tables">
+    <thead>
+    <tr>
+        <h2>Food</h2>
+    </tr>
+    </thead>
+
+    <tbody>
+    <tr th:each="food: ${foods}">
+        <td th:text="${food.getName()}"></td>
+        <td th:text="${food.getPrice()}"></td>
+    </tr>
+    </tbody>
+</table>
+
+
+<!-- nr2-->
+
+
+<h2>Lav Meal</h2>
+
+<form action="#" th:action="@{/addMeal}" th:object="${meal}" method="post">
+
+    <p>Food: <input type="text" th:field="*{food}"></p>
+
+    <input type="submit" value="Tilføj" class="btn add2"/>
+
+</form>
+
+
+</body>
+</html>

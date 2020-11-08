@@ -8,9 +8,6 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 @SpringBootTest
 class WebshopApplicationTests {
 
-    @Test
-    void contextLoads() {
-    }
 
     @Test
     void add() {

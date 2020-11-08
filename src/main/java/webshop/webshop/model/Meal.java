@@ -12,6 +12,7 @@ public class Meal {
     private Long id;
     private String Name;
     private String food;
+    private String weight;
 
     public Meal(String food) {
         this.food = food;
